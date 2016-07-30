@@ -1,3 +1,5 @@
 # exclude all local IDE project preferences
 .idea/*
 *.iml
+target/*
+*.log
