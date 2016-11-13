@@ -1,6 +1,6 @@
-package com.hexspeaks.http;
+package com.github.dikhan.http;
 
-import com.hexspeaks.exceptions.HttpMessageParseException;
+import com.github.dikhan.exceptions.HttpMessageParseException;
 import org.junit.Assert;
 import org.junit.Test;
 

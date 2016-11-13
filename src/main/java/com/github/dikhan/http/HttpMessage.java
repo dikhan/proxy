@@ -1,6 +1,6 @@
-package com.hexspeaks.http;
+package com.github.dikhan.http;
 
-import com.hexspeaks.exceptions.HttpMessageParseException;
+import com.github.dikhan.exceptions.HttpMessageParseException;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -41,7 +41,7 @@ public class HttpMessage {
         } else {
             String headerKey = headerKeyValue[0].trim();
             if(!httpHeaders.containsKey(headerKey)) {
-                httpHeaders.put(headerKey, new ArrayList<String>());
+                httpHeaders.put(headerKey, new ArrayList<>());
             }
             List<String> headerValues = httpHeaders.get(headerKey);
             headerValues.add(headerKeyValue[1].trim());
@@ -77,7 +77,7 @@ public class HttpMessage {
         sb.append(getRequestLine());
         for(String header : httpHeaders.keySet()) {
             for(String value : httpHeaders.get(header)) {
-                sb.append(header + ": " + value + CRLF);
+                sb.append(header).append(": ").append(value).append(CRLF);
             }
         }
         sb.append(CRLF);

@@ -1,8 +1,8 @@
-package com.hexspeaks;
+package com.github.dikhan;
 
-import com.hexspeaks.exceptions.HttpMessageParseException;
-import com.hexspeaks.http.HttpMessage;
-import com.hexspeaks.http.HttpParser;
+import com.github.dikhan.exceptions.HttpMessageParseException;
+import com.github.dikhan.http.HttpMessage;
+import com.github.dikhan.http.HttpParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +30,7 @@ public class ClientTask implements Runnable {
                 HttpParser httpParser = new HttpParser(clientInput);
                 HttpMessage httpMessage = httpParser.parse();
 
-                boolean isSsl = (httpMessage.getUrl().getHost().contains("https") ? true : false);
+                boolean isSsl = (httpMessage.getUrl().getHost().contains("https"));
 
                 upstreamConnection = new Socket(httpMessage.getUrl().getHost(), isSsl ? 443 : 80);
                 forwardRequestUpstream(upstreamConnection.getOutputStream(), httpMessage);

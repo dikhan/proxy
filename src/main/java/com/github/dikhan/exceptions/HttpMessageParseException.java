@@ -1,4 +1,4 @@
-package com.hexspeaks.exceptions;
+package com.github.dikhan.exceptions;
 
 public class HttpMessageParseException extends Exception {
 

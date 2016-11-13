@@ -1,4 +1,4 @@
-package com.hexspeaks.http;
+package com.github.dikhan.http;
 
 public enum HttpMethod {
 

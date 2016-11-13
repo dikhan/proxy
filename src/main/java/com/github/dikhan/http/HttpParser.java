@@ -1,6 +1,6 @@
-package com.hexspeaks.http;
+package com.github.dikhan.http;
 
-import com.hexspeaks.exceptions.HttpMessageParseException;
+import com.github.dikhan.exceptions.HttpMessageParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -91,7 +91,7 @@ public class HttpParser {
     }
 
     private boolean carriageReturnLineFeed(int previous, int current) throws HttpMessageParseException {
-        return previous != -1 && current != -1 ? (char)previous == CR && (char)current == LF : false;
+        return previous != -1 && current != -1 && (char) previous == CR && (char) current == LF;
     }
 
     private boolean carriageReturnLineFeed(String line) {
