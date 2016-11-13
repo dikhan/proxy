@@ -1,7 +1,8 @@
 package com.hexspeaks.http;
 
 import com.hexspeaks.exceptions.HttpMessageParseException;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.io.InputStream;
 
 public class HttpParser {
 
-    private final static Logger logger = Logger.getLogger(HttpParser.class);
+    private final static Logger logger = LoggerFactory.getLogger(HttpParser.class);
 
     private static final char CR = '\r';
     private static final char LF = '\n';

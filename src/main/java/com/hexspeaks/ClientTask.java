@@ -3,7 +3,8 @@ package com.hexspeaks;
 import com.hexspeaks.exceptions.HttpMessageParseException;
 import com.hexspeaks.http.HttpMessage;
 import com.hexspeaks.http.HttpParser;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.net.Socket;
@@ -11,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 
 public class ClientTask implements Runnable {
 
-    private final static Logger logger = Logger.getLogger(ClientTask.class);
+    private final static Logger logger = LoggerFactory.getLogger(ClientTask.class);
 
     private final Socket clientSocket;
 

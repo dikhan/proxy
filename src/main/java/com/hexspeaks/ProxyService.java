@@ -1,6 +1,7 @@
 package com.hexspeaks;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -10,7 +11,7 @@ import java.util.concurrent.Executors;
 
 public class ProxyService {
 
-    private final static Logger logger = Logger.getLogger(ProxyService.class);
+    private final static Logger logger = LoggerFactory.getLogger(ProxyService.class);
 
     private static final int MAX_NUMBER_CLIENT_THREADS = 10;
 
